@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+# Exit if any subcommand fails
+set -euo pipefail
+IFS=$'\n\t'
+set -vx
+
+# Install dependencies
+bundle install
+
+# If .env.example exists and .env doesn't, install .env
+if [ ! -f .env ] && [ -f .env.example ]; then
+  cp .env.example .env
+fi

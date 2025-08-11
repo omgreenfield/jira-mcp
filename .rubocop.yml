@@ -1,0 +1,104 @@
+# Copy pasted from inrev-asset-tool
+
+AllCops:
+  Exclude:
+    - 'bin/{rails,rake,webpack,webpack-dev-server,yarn}'
+    - 'config/environments/**/*'
+    - 'config/initializers/**/*'
+    - 'config/puma.rb'
+    - 'db/**/*'
+    - 'node_modules/**/*'
+    - 'public/**/*'
+    - 'tmp/**/*'
+    - 'untracked/**/*'
+    - 'app/models/legacy/*'
+    - 'vendor/**/*'
+  TargetRubyVersion: 3.2
+  NewCops: enable
+
+Layout/ExtraSpacing:
+  Enabled: false
+
+Metrics/AbcSize:
+  Max: 175
+Metrics/BlockLength:
+  Max: 175
+  Exclude:
+    - config/routes.rb
+    - spec/**/*.rb
+Metrics/ClassLength:
+  Max: 1000
+Metrics/CyclomaticComplexity:
+  Max: 50
+Metrics/MethodLength:
+  Max: 175
+Metrics/ModuleLength:
+  Max: 1000
+Metrics/PerceivedComplexity:
+  Max: 50
+Metrics/ParameterLists:
+  Max: 12
+
+# Trailing commas make for clearer diffs because the last line won't appear
+# to have been changed, as it would if it lacked a comma and had one added.
+Style/TrailingCommaInArguments:
+  EnforcedStyleForMultiline: comma
+Style/TrailingCommaInArrayLiteral:
+  EnforcedStyleForMultiline: comma
+Style/TrailingCommaInHashLiteral:
+  EnforcedStyleForMultiline: comma
+
+Style/AccessModifierDeclarations:
+  EnforcedStyle: 'inline'
+
+# Cop supports --auto-correct.
+# Configuration parameters: PreferredDelimiters.
+Style/PercentLiteralDelimiters:
+  PreferredDelimiters:
+    # Using `[]` for string arrays instead of `()`, since normal arrays are
+    # indicated with `[]` not `()`.
+    '%w': '[]'
+    '%W': '[]'
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/ConditionalAssignment:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/FormatStringToken:
+  Enabled: false
+
+Style/HashSyntax:
+  StyleGuide: '#hash-literals'
+  Enabled: true
+  VersionAdded: '0.9'
+  VersionChanged: '1.24'
+  EnforcedStyle: ruby19
+  EnforcedShorthandSyntax: always
+  UseHashRocketsWithSymbolValues: false
+  PreferHashRocketsForNonAlnumEndingSymbols: false
+
+Style/Lambda:
+  EnforcedStyle: literal
+
+Style/RescueStandardError:
+  Enabled: true
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Naming/VariableNumber:
+  Enabled: false
+
+Layout/DotPosition:
+  EnforcedStyle: leading
+
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+
+Style/RescueModifier:
+  Enabled: false
