@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 
 # General
 gem 'dotenv' # Development/test environment variables
+gem 'faraday' # Make requests to Jira API
 gem 'fast-mcp' # Easy MCP servers
 gem 'logger' # Logging
 

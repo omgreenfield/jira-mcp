@@ -53,6 +53,12 @@ GEM
       activesupport (>= 5.0.0)
     faker (3.5.1)
       i18n (>= 1.8.11, < 2)
+    faraday (2.13.1)
+      faraday-net_http (>= 2.0, < 3.5)
+      json
+      logger
+    faraday-net_http (3.4.0)
+      net-http (>= 0.5.0)
     fast-mcp (1.5.0)
       addressable (~> 2.8)
       base64
@@ -104,6 +110,8 @@ GEM
     mime-types-data (3.2025.0610)
     minitest (5.25.5)
     nenv (0.3.0)
+    net-http (0.6.0)
+      uri
     notiffany (0.1.3)
       nenv (~> 0.1)
       shellany (~> 0.0)
@@ -178,6 +186,7 @@ GEM
     unicode-display_width (3.1.4)
       unicode-emoji (~> 4.0, >= 4.0.4)
     unicode-emoji (4.0.4)
+    uri (1.0.3)
     yard (0.9.37)
     zeitwerk (2.7.3)
 
@@ -197,6 +206,7 @@ DEPENDENCIES
   dotenv
   factory_bot
   faker
+  faraday
   fast-mcp
   guard
   guard-rspec

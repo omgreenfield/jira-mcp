@@ -2,6 +2,13 @@
 
 Use [fast-mcp](https://github.com/yjacquin/fast-mcp) gem to easily spin up an MCP server.
 
+## An important note
+
+In `src/mcp.rb`, there are custom fields that may be different for your Jira project.
+
+- `epic` -> `customfield_10014`
+- `sprint` -> `customfield_10021`
+
 ## Installation
 
 ```sh

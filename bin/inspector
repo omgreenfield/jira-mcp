@@ -1,1 +1,1 @@
-npx @modelcontextprotocol/inspector bin/mcp
+npx @modelcontextprotocol/inspector $(pwd)/bin/mcp
