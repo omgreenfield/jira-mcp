@@ -1,8 +1,7 @@
 #!/usr/bin/env ruby
 
 require 'bundler/setup'
-require 'pry'
-Bundler.require
+Bundler.require(:development)
 
 require_relative '../src/mcp'
 
